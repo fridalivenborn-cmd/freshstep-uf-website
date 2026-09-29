@@ -48,11 +48,40 @@
         }
 
         .logo {
-            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-size: 1.1rem;
             font-weight: 800;
             color: #2d5a3d;
-            text-decoration: none;
             letter-spacing: -0.03em;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .logo-text span:first-child {
+            font-size: 0.95rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text span:last-child {
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: #516a59;
+            font-weight: 700;
         }
 
         nav {
@@ -468,6 +497,7 @@
         @media (max-width: 768px) {
             nav {
                 gap: 15px;
+                flex-wrap: wrap;
             }
 
             .hero-content {
@@ -511,7 +541,24 @@
 <body>
     <header>
         <div class="container nav">
-            <a href="#hem" class="logo">FreshStep UF</a>
+            <a href="#hem" class="logo">
+                <div class="logo-img">
+                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Skopåse outline -->
+                        <path d="M12 15C12 13 13.5 12 15 12H30C31.5 12 33 13 33 15V35C33 37 31.5 38 30 38H15C13.5 38 12 37 12 35V15Z" 
+                              stroke="#2d5a3d" stroke-width="1.5" fill="none"/>
+                        <!-- Handtag -->
+                        <path d="M18 12C18 10 18 8 22.5 8C27 8 27 10 27 12" 
+                              stroke="#2d5a3d" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        <!-- Dragkedja -->
+                        <circle cx="22.5" cy="13" r="1" fill="#2d5a3d"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span>FreshStep</span>
+                    <span>UF</span>
+                </div>
+            </a>
             <nav>
                 <a href="#hem">Hem</a>
                 <a href="#produkten">Produkten</a>
